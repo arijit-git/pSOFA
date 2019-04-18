@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_row_background">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:src="@drawable/ic_delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:layout_toLeftOf="@id/delete_icon"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ms_white"
+        android:padding="@dimen/padd_10">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/thumbnail"
+            android:layout_height="@dimen/thumbnail"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/baby"
+            android:backgroundTint="@color/colorPrimary"
+            android:clickable="true"
+            app:tintMode="src_in" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="Test"
+            android:textColor="@color/item_name"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/thumbnail"
+            android:text="Male"
+            android:textColor="@color/description"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/life_res_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/life_res"
+            android:text="N/A"
+            android:textColor="@color/material_green_700"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-24dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/gender"
+            android:text="12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/life_res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnail"
+            android:layout_alignParentBottom="false"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@+id/gender"
+            android:text="Final Outcome :"
+            android:textColor="@color/item_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="pSOFA Score"
+            android:textColor="@color/item_name"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/scoreTextMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="80dp"
+            android:text="Max : "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/scoreValMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/scoreTextMax"
+            android:text="0.0"
+            android:textColor="@color/fui_bgEmail"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/scoreTextMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="80dp"
+            android:text="Min : "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/scoreValMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/scoreTextMax"
+            android:text="0.0"
+            android:textColor="@color/fui_bgEmail"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</FrameLayout>

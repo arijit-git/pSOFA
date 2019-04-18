@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3B698B</color>
+    <color name="colorPrimaryDark">#4ED4D6</color>
+    <color name="colorAccent">#66C2D9</color>
+
+    <color name="colorBackroundWhite">#F0F2EA</color>
+    <color name="colorOrange">#F68159</color>
+    <color name="colorGray">#495C67</color>
+    <color name="colorLightGray">#a6abae</color>
+
+    <color name="bg_row_background">#F52318</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+
+    <!-- FireBase -->
+    <color name="material_green_50">#E8F5E9</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_a200">#69F0AE</color>
+    <color name="material_lime_a700">#AEEA00</color>
+    <color name="material_purple_a700">#AA00FF</color>
+    <color name="backdround_diag">#FDEEDB</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="psofa_app_bar">#5EC4F7</color>
+    <color name="psofa_body">#A1E9E4</color>
+    <color name="ColorBackgroundWhite">#F0F2EA</color>
+
+</resources>

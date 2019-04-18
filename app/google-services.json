@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1030646223540",
+    "firebase_url": "https://psofa-6d562.firebaseio.com",
+    "project_id": "psofa-6d562",
+    "storage_bucket": "psofa-6d562.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030646223540:android:a2368465578547e7",
+        "android_client_info": {
+          "package_name": "com.ray.apps.psofa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030646223540-m51udv151odc0ie19abrttklohjr73mr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANLxjk4EsJrcITAW89gk_xZUHRSwZi6L0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030646223540-m51udv151odc0ie19abrttklohjr73mr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

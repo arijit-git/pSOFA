@@ -1,0 +1,97 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ray.apps.psofa">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="orientation|screenSize"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+
+        <activity android:name=".activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PatientActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_patient"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.NavActivity" />
+        </activity>
+        <activity
+            android:name=".activities.RegisterPatientActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.NavActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.NavActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SignInActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter android:label="@string/sign_in">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data android:scheme="http"
+                    android:host="www.psofa.com"
+                    android:pathPrefix="/@string/sign_in" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <data android:scheme="psofa"
+                    android:host="psofa" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.RegisterActivity" />
+        <activity
+            android:name=".activities.NavActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.SignInActivity"/>
+
+        <!-- The meta-data element is needed for versions lower than 4.1 -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".activities.NavActivity" />
+        <activity
+            android:name=".activities.DiagnosisActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.NavActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.NavActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".activities.NavActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.NavActivity" />
+        </activity>
+    </application>
+
+
+</manifest>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ms_white"
+    tools:context=".activities.PatientActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/psofa_app_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.039">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Test Patient"
+                android:textColor="@color/stpi_default_primary_color"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Sex :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textViewSexVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Male"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Age :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewSexVal"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textViewAgeVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="12"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Spinner
+                android:id="@+id/days_spinner"
+                style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/material_green_50"
+                android:minWidth="@dimen/activity_vertical_margin"
+                android:popupBackground="@color/ColorBackgroundWhite"
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toTopOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/result_spinner" />
+
+            <Spinner
+                android:id="@+id/result_spinner"
+                style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_green_50"
+                android:minWidth="@dimen/activity_vertical_margin"
+                android:popupBackground="@color/ColorBackgroundWhite"
+                android:spinnerMode="dropdown"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_switch" />
+
+            <Button
+                android:id="@+id/btn_diag"
+                style="@android:style/Widget.Material.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/stpi_default_primary_color"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/diag_start_btn_text"
+                android:textAllCaps="false"
+                android:textColor="@color/ms_white"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.479"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/patient_modify_warning"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="12sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/days_spinner" />
+
+            <TextView
+                android:id="@+id/text_scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="pSOFA Scores"
+                android:textColor="@color/browser_actions_text_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSexVal" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_scores" />
+
+            <TextView
+                android:id="@+id/textViewDay1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Day 1 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/textViewDay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Day 2 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/score_val_day1"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/textViewDay3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Day 3 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/score_val_day2"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/textViewDay4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Day 4 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDay1" />
+
+            <TextView
+                android:id="@+id/textViewDay5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Day 5 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/score_val_day4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDay2" />
+
+            <TextView
+                android:id="@+id/textViewDay6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Day 6 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/score_val_day5"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDay3" />
+
+            <TextView
+                android:id="@+id/textViewDay7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:text="Day 7 :"
+                android:textColor="@color/browser_actions_text_color"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDay4" />
+
+            <TextView
+                android:id="@+id/score_val_day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay1"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/score_val_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay2"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/score_val_day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay3"
+                app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+            <TextView
+                android:id="@+id/score_val_day4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay4"
+                app:layout_constraintTop_toBottomOf="@+id/score_val_day1" />
+
+            <TextView
+                android:id="@+id/score_val_day5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay5"
+                app:layout_constraintTop_toBottomOf="@+id/score_val_day2" />
+
+            <TextView
+                android:id="@+id/score_val_day6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay6"
+                app:layout_constraintTop_toBottomOf="@+id/score_val_day3" />
+
+            <TextView
+                android:id="@+id/score_val_day7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="0.0"
+                android:textColor="@color/fui_bgEmail"
+                android:textSize="14sp"
+                android:typeface="sans"
+                app:layout_constraintStart_toEndOf="@+id/textViewDay7"
+                app:layout_constraintTop_toBottomOf="@+id/score_val_day4" />
+
+            <Switch
+                android:id="@+id/p_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:switchMinWidth="50dp"
+                android:switchPadding="30dp"
+                android:text="Mark Final Outcome"
+                android:textSize="14sp"
+                android:thumbTint="@color/psofa_app_bar"
+                android:typeface="sans"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDay7" />
+
+            <TextView
+                android:id="@+id/textViewFinalOutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Final Outcome"
+                android:textColor="@color/fui_bgPhone"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDay7" />
+
+            <TextView
+                android:id="@+id/textViewFinalOutcomeVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif"
+                android:text="N/a"
+                android:textAllCaps="true"
+                android:textColor="@color/fui_bgAnonymous"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewFinalOutcome"
+                app:layout_constraintTop_toBottomOf="@+id/score_val_day7" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

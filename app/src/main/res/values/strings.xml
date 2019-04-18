@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">pSOFA</string>
+    <string name="appCompatButtonLogin">Login</string>
+    <string name="welcome_text">Welcome to pSOFA</string>
+    <string name="loginWelcomeText">The Pediatric Sequential Organ Failure Assessment (pSOFA) score may predict in-hospital mortality in critically ill pediatric patients</string>
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">513502495841395</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb513502495841395</string>
+    <string name="google_client_id">1030646223540-m51udv151odc0ie19abrttklohjr73mr.apps.googleusercontent.com</string>
+
+    <!-- Diagnosis Result-->
+    <string name="sofa_score_result_text">pSOFA Result</string>
+    <string name="text_accounts">All Accounts</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="text_login">Login</string>
+    <string name="text_register">Register</string>
+    <string name="error_message_name">Enter Full Name</string>
+    <string name="error_message_email">Enter Valid Email</string>
+    <string name="error_message_age">Enter Age</string>
+    <string name="error_message_password">Enter Password</string>
+    <string name="success_message">Registration Successful</string>
+    <string name="text_not_member">Don\u0027t have an account? <b>Sign Up</b></string>
+    <string name="text_already_member">Already have an account? <b>Login Now</b></string>
+    <string name="text_verify_email">Your email is not verified.\nPlease verify your email id here.</string>
+    <string name="verify_email_text">Verify Email</string>
+    <string name="error_password_match">Password Does Not Matches</string>
+    <string name="error_valid_email_password">Wrong Email or Password</string>
+    <string name="text_hello">Hello,</string>
+    <string name="text_title">Welcome to Pediatric SOFA Score</string>
+    <string name="user_exists">Already a member? Login</string>
+    <string name="title_activity_nav">pSOFA Home</string>
+    <string name="patient_modify_warning">*Warning : Diagnosis data for same day numbers will be overwritten.</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">pSOFA</string>
+    <string name="nav_header_subtitle">ray.psofa@android.com</string>
+    <string name="nav_header_desc">pSOFA Navigation</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_patient">Patients</string>
+    <string name="nav_settings">Account Settings</string>
+    <string name="nav_help">Help \u0026 Feedback</string>
+    <string name="nav_dashboard">pSOFA Dashboard</string>
+
+    <string name="patient_register_text">Register Patient Details</string>
+    <string name="patient_register_button_text">Add Basic Details</string>
+    <string name="patient_register_more_button_text">Add Clinical Details</string>
+    <string name="final_result_button_text">Mark Final Outcome</string>
+    <string name="prompt_name">Patient\'s Name</string>
+    <string name="prompt_age">Patient\'s Age</string>
+    <string name="male_radio">Male</string>
+    <string name="female_radio">Female</string>
+
+    <string name="about_text">
+  <![CDATA[
+    Author: Your name<br/><br/>Your description text, changelog, licences etc&#8230; ]]>
+    </string>
+    <string name="hint_user_id">User ID</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="send_link">Send Link</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="loading">Loading...</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="guest_user_text">Guest</string>
+    <string name="guest_phone_number">+91 0123456789</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Welcome to pSOFA Diagnosis</string>
+    <string name="diag_step_one_title">Record Respiratory Diagnosis</string>
+    <string name="patient_floating_button_text">Click on the plus sign to add more patients.\n\n*Pull down to refresh*</string>
+    <string name="delete">DELETE</string>
+    <string name="refresh_text">Pull down to refresh</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="title_activity_patient">PatientActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="diag_start_btn_text">Start Diagnosis</string>
+    <string name="app_version">v1.0</string>
+    <string name="heellll">test</string>
+
+</resources>
