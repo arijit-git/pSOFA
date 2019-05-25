@@ -39,23 +39,27 @@ public class pSOFACalculator {
     {
         double score = 0.0;
         int pa02fio2b = 0, spo2fio2c = 0;
-        if(type.isEmpty() && type.equalsIgnoreCase("pao2"))
+        if(!type.isEmpty() && type.equalsIgnoreCase("pao2"))
         {
             // scores for pa02:fio2b readings
+            pa02fio2b = count;
+
             if(pa02fio2b >= 400) score = 0.0;
-            if(pa02fio2b > 300 && pa02fio2b <= 399) score = 1.0;
-            if(pa02fio2b > 200 && pa02fio2b <= 299) score = 2.0;
-            if(pa02fio2b > 100 && pa02fio2b <= 199) score = 3.0;
+            if(pa02fio2b >= 300 && pa02fio2b <= 399) score = 1.0;
+            if(pa02fio2b >= 200 && pa02fio2b <= 299) score = 2.0;
+            if(pa02fio2b >= 100 && pa02fio2b <= 199) score = 3.0;
             if(pa02fio2b < 100) score = 4.0;
         }
-        if(type.isEmpty() && type.equalsIgnoreCase("spo2"))
+        if(!type.isEmpty() && type.equalsIgnoreCase("spo2"))
         {
             // scores for spo2:fio2c readings
+            spo2fio2c = count;
+
             if(spo2fio2c >= 292) score = 0.0;
-            if(pa02fio2b > 264 && pa02fio2b <= 291) score = 1.0;
-            if(pa02fio2b > 221 && pa02fio2b <= 264) score = 2.0;
-            if(pa02fio2b > 148 && pa02fio2b <= 220) score = 3.0;
-            if(pa02fio2b < 148) score = 4.0;
+            if(spo2fio2c >= 264 && spo2fio2c <= 291) score = 1.0;
+            if(spo2fio2c >= 221 && spo2fio2c <= 264) score = 2.0;
+            if(spo2fio2c >= 148 && spo2fio2c <= 220) score = 3.0;
+            if(spo2fio2c < 148) score = 4.0;
         }
 
         return score;
@@ -278,7 +282,7 @@ public class pSOFACalculator {
     {
         double score = 0.0;
 
-        if(ageInMonths > 0 && creatinineCount > 0)
+        if(ageInMonths != 0 && creatinineCount != 0)
         {
             // scores for creatinine count mg/dL
             if(ageInMonths < 1) {
@@ -289,46 +293,45 @@ public class pSOFACalculator {
                 if(creatinineCount > 1.6) score = 4.0;
             }
             if(ageInMonths >= 1 && ageInMonths <= 11) {
-                if (creatinineCount < 0.8) score = 0.0;
-                if(creatinineCount >= 0.8 && creatinineCount <= 0.9) score = 1.0;
-                if(creatinineCount >= 1.0 && creatinineCount <= 1.1) score = 2.0;
-                if(creatinineCount >= 1.2 && creatinineCount <= 1.5) score = 3.0;
-                if(creatinineCount > 1.6) score = 4.0;
+                if (creatinineCount < 0.3) score = 0.0;
+                if(creatinineCount >= 0.3 && creatinineCount <= 0.4) score = 1.0;
+                if(creatinineCount >= 0.5 && creatinineCount <= 0.7) score = 2.0;
+                if(creatinineCount >= 0.8 && creatinineCount <= 1.1) score = 3.0;
+                if(creatinineCount > 1.2) score = 4.0;
             }
             if(ageInMonths >= 12 && ageInMonths <= 23) {
-                if (creatinineCount < 0.8) score = 0.0;
-                if(creatinineCount >= 0.8 && creatinineCount <= 0.9) score = 1.0;
-                if(creatinineCount >= 1.0 && creatinineCount <= 1.1) score = 2.0;
-                if(creatinineCount >= 1.2 && creatinineCount <= 1.5) score = 3.0;
-                if(creatinineCount > 1.6) score = 4.0;
+                if (creatinineCount < 0.4) score = 0.0;
+                if(creatinineCount >= 0.4 && creatinineCount <= 0.5) score = 1.0;
+                if(creatinineCount >= 0.6 && creatinineCount <= 1.0) score = 2.0;
+                if(creatinineCount >= 1.1 && creatinineCount <= 1.4) score = 3.0;
+                if(creatinineCount > 1.5) score = 4.0;
             }
             if(ageInMonths >= 24 && ageInMonths <= 59) {
-                if (creatinineCount < 0.8) score = 0.0;
-                if(creatinineCount >= 0.8 && creatinineCount <= 0.9) score = 1.0;
-                if(creatinineCount >= 1.0 && creatinineCount <= 1.1) score = 2.0;
-                if(creatinineCount >= 1.2 && creatinineCount <= 1.5) score = 3.0;
-                if(creatinineCount > 1.6) score = 4.0;
+                if (creatinineCount < 0.6) score = 0.0;
+                if(creatinineCount >= 0.6 && creatinineCount <= 0.8) score = 1.0;
+                if(creatinineCount >= 0.9 && creatinineCount <= 1.5) score = 2.0;
+                if(creatinineCount >= 1.6 && creatinineCount <= 2.2) score = 3.0;
+                if(creatinineCount > 2.3) score = 4.0;
             }
             if(ageInMonths >= 60 && ageInMonths <= 143) {
-                if (creatinineCount < 0.8) score = 0.0;
-                if(creatinineCount >= 0.8 && creatinineCount <= 0.9) score = 1.0;
-                if(creatinineCount >= 1.0 && creatinineCount <= 1.1) score = 2.0;
-                if(creatinineCount >= 1.2 && creatinineCount <= 1.5) score = 3.0;
-                if(creatinineCount > 1.6) score = 4.0;
+                if (creatinineCount < 0.7) score = 0.0;
+                if(creatinineCount >= 0.7 && creatinineCount <= 1.0) score = 1.0;
+                if(creatinineCount >= 1.1 && creatinineCount <= 1.7) score = 2.0;
+                if(creatinineCount >= 1.8 && creatinineCount <= 2.5) score = 3.0;
+                if(creatinineCount > 2.6) score = 4.0;
             }
             if(ageInMonths >= 144 && ageInMonths <= 216) {
-                if (creatinineCount < 0.8) score = 0.0;
-                if(creatinineCount >= 0.8 && creatinineCount <= 0.9) score = 1.0;
-                if(creatinineCount >= 1.0 && creatinineCount <= 1.1) score = 2.0;
-                if(creatinineCount >= 1.2 && creatinineCount <= 1.5) score = 3.0;
-                if(creatinineCount > 1.6) score = 4.0;
+                if (creatinineCount < 1.0) score = 0.0;
+                if(creatinineCount >= 1.0 && creatinineCount <= 1.6) score = 1.0;
+                if(creatinineCount >= 1.7 && creatinineCount <= 2.8) score = 2.0;
+                if(creatinineCount >= 2.9 && creatinineCount <= 4.1) score = 3.0;
+                if(creatinineCount > 4.2) score = 4.0;
             }
             if(ageInMonths > 216) {
-                if (creatinineCount < 0.8) score = 0.0;
-                if(creatinineCount >= 0.8 && creatinineCount <= 0.9) score = 1.0;
-                if(creatinineCount >= 1.0 && creatinineCount <= 1.1) score = 2.0;
-                if(creatinineCount >= 1.2 && creatinineCount <= 1.5) score = 3.0;
-                if(creatinineCount > 1.6) score = 4.0;
+                if (creatinineCount < 1.2) score = 0.0;
+                if(creatinineCount >= 1.2 && creatinineCount <= 1.9) score = 2.0;
+                if(creatinineCount >= 2.0 && creatinineCount <= 3.4) score = 3.0;
+                if(creatinineCount > 5) score = 4.0;
             }
 
         }

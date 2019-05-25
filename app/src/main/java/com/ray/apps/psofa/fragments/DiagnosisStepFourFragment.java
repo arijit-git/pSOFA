@@ -396,7 +396,7 @@ public class DiagnosisStepFourFragment extends Fragment implements View.OnClickL
             Log.d(TAG, "Key : " + sharedPrefs.getCardioFinalKey() );
             //sharedPrefs.setCardioBP(getContext(), step40_bp_input.getText().toString());
         }
-
+    else
         if(!step41_dopamine_input.getText().toString().isEmpty())
         {
             dopamine = "ON";
@@ -406,7 +406,7 @@ public class DiagnosisStepFourFragment extends Fragment implements View.OnClickL
             sharedPrefs.setCardioFinalKeyValue(getContext(), step41_dopamine_input.getText().toString());
             //sharedPrefs.setCardioDopamine(getContext(), step41_dopamine_input.getText().toString());
         }
-
+    else
         if(!step42_epinephrine_input.getText().toString().isEmpty())
         {
             epinephrine = "ON";
@@ -416,7 +416,7 @@ public class DiagnosisStepFourFragment extends Fragment implements View.OnClickL
             sharedPrefs.setCardioFinalKeyValue(getContext(), step42_epinephrine_input.getText().toString());
             //sharedPrefs.setCardioEpinephrine(getContext(), step42_epinephrine_input.getText().toString());
         }
-
+    else
         if(!step43_nor_epinephrine_input.getText().toString().isEmpty())
         {
             nor_epinephrine = "ON";

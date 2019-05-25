@@ -108,6 +108,7 @@ public class DiagnosisStepSixFragment extends Fragment implements View.OnClickLi
                     Log.d(TAG, "onClick: age :" + ageInput + " creatinine count: " + creatinine);
 
                 }
+
                 sharedPrefs.saveRenalInput(getContext(), ageInput, creatinine);
 
                 if (mListener != null)

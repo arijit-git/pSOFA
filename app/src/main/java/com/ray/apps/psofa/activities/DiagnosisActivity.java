@@ -192,7 +192,7 @@ public class DiagnosisActivity extends BaseActivity
             double RespScore = calculator.getRespiratoryScore(Integer.parseInt(sharedPrefs.getRespiratoryInput()), sharedPrefs.getRespiratoryInputType());
             double CoagScore = calculator.getCoagulationScore(Integer.parseInt(sharedPrefs.getCoagulatoryInput()));
             double HepaticScore = calculator.getHepaticScore(Double.parseDouble(sharedPrefs.getHepaticInput()));
-
+            Log.d(TAG, "resp input : " + sharedPrefs.getRespiratoryInput() + " type : " + sharedPrefs.getRespiratoryInputType());
             int bp = 0;
             Double dopamine=0.0, epinephrine=0.0, nor_epinephrine=0.0;
 
@@ -239,7 +239,7 @@ public class DiagnosisActivity extends BaseActivity
                     sharedPrefs.getCardioDobutamineInput());*/
             double NeuroScore = calculator.getNeurologicalScore(Integer.parseInt(sharedPrefs.getNeurologicInput()));
             double RenalScore = calculator.getRenalScore(Integer.parseInt(sharedPrefs.getRenalAgeInput()), Double.parseDouble(sharedPrefs.getRenalCreatinineInput()));
-
+            Log.d(TAG, "renal age input : " + sharedPrefs.getRenalAgeInput() + " renal count : " + Double.parseDouble(sharedPrefs.getRenalCreatinineInput()));
             Log.d(TAG, "RespScore = " + RespScore + " CoagScore = " + CoagScore + " HepaticScore = " + HepaticScore
             + " CardioScore = " + cardioScore + " NeuroScore = " + NeuroScore + " RenalScore = " + RenalScore);
             finalScore = RespScore + CoagScore + HepaticScore + cardioScore + NeuroScore + RenalScore;

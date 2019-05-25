@@ -168,6 +168,10 @@ public class SharedPrefs {
     public String getBasicPatientAge(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String res = sharedPreferences.getString(pAge, "N/A");
+        if(res == null || res.isEmpty())
+        {
+            res = "0";
+        }
         return res;
     }
     public String getBasicPatientGender(){
@@ -204,8 +208,18 @@ public class SharedPrefs {
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String s1 = sharedPreferences.getString(resp_pao2, "0");
         String s2 = sharedPreferences.getString(resp_spo2, "0");
+        if(!s1.isEmpty()) {
 
-        return s1.equalsIgnoreCase("0")? s2 : s1;
+            return s1;
+        }
+        else
+            if(!s2.isEmpty())
+        {
+            return s2;
+        }
+
+
+        return "0";
     }
     public String getRespiratoryInputType(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
@@ -222,7 +236,7 @@ public class SharedPrefs {
     public String getCoagulatoryInput(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String res = sharedPreferences.getString(platleteCount, "0");
-        if(res.isEmpty())
+        if(res == null || res.isEmpty())
         {
             res = "0";
         }
@@ -238,7 +252,7 @@ public class SharedPrefs {
     public String getHepaticInput(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String res = sharedPreferences.getString(bilirubinCount, "0.0");
-        if(res.isEmpty())
+        if(res == null || res.isEmpty())
         {
             res = "0.0";
         }
@@ -368,7 +382,7 @@ public class SharedPrefs {
     public String getNeurologicInput(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String res = sharedPreferences.getString(gcs, "0");
-        if(res.isEmpty())
+        if(res == null || res.isEmpty())
         {
             res = "0";
         }
@@ -385,7 +399,7 @@ public class SharedPrefs {
     public String getRenalAgeInput(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String res = sharedPreferences.getString(renalAge, "0");
-        if(res.isEmpty())
+        if(res == null || res.isEmpty())
         {
             res = "0";
         }
@@ -394,7 +408,7 @@ public class SharedPrefs {
     public String getRenalCreatinineInput(){
         sharedPreferences = mContext.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         String res = sharedPreferences.getString(renalCreatinine, "0.0");
-        if(res.isEmpty())
+        if(res == null || res.isEmpty())
         {
             res = "0.0";
         }

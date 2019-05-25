@@ -134,7 +134,7 @@ public class PatientsViewFragment extends Fragment
             mAuth = FirebaseAuth.getInstance();
             currentUser = mAuth.getCurrentUser();
 
-           preparePatientList();
+           //preparePatientList();
         //new AsyncPatientTask();
         mProgressBar.setVisibility(View.VISIBLE);
 

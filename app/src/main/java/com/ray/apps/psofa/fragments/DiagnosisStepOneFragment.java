@@ -128,7 +128,7 @@ public class DiagnosisStepOneFragment extends Fragment implements View.OnClickLi
             case R.id.nextBT:
                 if(!step1Input.getText().toString().isEmpty()) {
                     String respInput = step1Input.getText().toString();
-                    Log.d(TAG, "onClick: Respiratory reading :" + respInput);
+                    Log.d(TAG, "onClick: Respiratory reading :" + respInput + " Type :" + type);
                     sharedPrefs.saveRespiratoryInput(getContext(), respInput, type);
 
                 }
