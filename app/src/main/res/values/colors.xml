@@ -26,5 +26,6 @@
     <color name="psofa_app_bar">#5EC4F7</color>
     <color name="psofa_body">#A1E9E4</color>
     <color name="ColorBackgroundWhite">#F0F2EA</color>
+    <color name="patients_bg">#EDF6BD</color>
 
 </resources>

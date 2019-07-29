@@ -104,6 +104,16 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/age2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/age"
+            android:text="months"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/life_res"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -41,6 +41,8 @@ public class ProfileActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         setTitle("My Profile");
+
+
         FBUserId = findViewById(R.id.tv_user_id_val);
         textName = findViewById(R.id.textpNameVal);
         textEmail = findViewById(R.id.textpEmailVal);
@@ -48,6 +50,13 @@ public class ProfileActivity extends BaseActivity {
         mProfileImageView = findViewById(R.id.imageProfile);
         et_phone = findViewById(R.id.et_phone);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // perform whatever you want on back arrow click
+                finish();
+            }
+        });
         //updatePhone = findViewById(R.id.buttonpSave);
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
