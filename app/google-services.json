@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "1030646223540",
-    "firebase_url": "https://psofa-6d562.firebaseio.com",
-    "project_id": "psofa-6d562",
-    "storage_bucket": "psofa-6d562.appspot.com"
+    "project_number": "595691179883",
+    "firebase_url": "https://psofa-ae0f6.firebaseio.com",
+    "project_id": "psofa-ae0f6",
+    "storage_bucket": "psofa-ae0f6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1030646223540:android:a2368465578547e7",
+        "mobilesdk_app_id": "1:595691179883:android:76fe6ccdd271246b",
         "android_client_info": {
-          "package_name": "com.ray.apps.psofa"
+          "package_name": "com.codebase.psofa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1030646223540-m51udv151odc0ie19abrttklohjr73mr.apps.googleusercontent.com",
+          "client_id": "595691179883-5radc1ciaeajl6aq4cc819tllhi5ptt0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyANLxjk4EsJrcITAW89gk_xZUHRSwZi6L0"
+          "current_key": "AIzaSyDemF4DzFYqj9KSy83qTexAxyUmA0chH48"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1030646223540-m51udv151odc0ie19abrttklohjr73mr.apps.googleusercontent.com",
+              "client_id": "595691179883-5radc1ciaeajl6aq4cc819tllhi5ptt0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

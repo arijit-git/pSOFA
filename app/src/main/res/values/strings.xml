@@ -7,7 +7,7 @@
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
     <string name="facebook_application_id" translatable="false">513502495841395</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb513502495841395</string>
-    <string name="google_client_id">1030646223540-m51udv151odc0ie19abrttklohjr73mr.apps.googleusercontent.com</string>
+    <string name="google_client_id">595691179883-5radc1ciaeajl6aq4cc819tllhi5ptt0.apps.googleusercontent.com</string>
 
     <!-- Diagnosis Result-->
     <string name="sofa_score_result_text">pSOFA Result</string>
