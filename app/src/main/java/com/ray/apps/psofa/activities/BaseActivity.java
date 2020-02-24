@@ -3,11 +3,12 @@ package com.ray.apps.psofa.activities;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.ray.apps.psofa.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class BaseActivity extends AppCompatActivity {

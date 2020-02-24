@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/patients_bg"
+    android:background="@color/design_default_color_secondary"
     tools:context=".fragments.HomeFragment">
+
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pullToRefresh" />
-
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/divider2"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toEndOf="@+id/val_totalPatients"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/addPatientText"
@@ -29,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/patient_floating_button_text"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/ms_black"
         android:textSize="12sp"
         android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,9 +53,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="Total Patients : "
+        android:textColor="@color/ms_black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
@@ -61,46 +64,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="0"
-        android:textColor="@color/fui_bgEmail"
+        android:textColor="@color/ms_black"
         app:layout_constraintStart_toEndOf="@+id/text_totalPatients"
         app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/pullToRefresh"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/val_totalPatients">
+        app:layout_constraintTop_toBottomOf="@+id/text_totalPatients">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rview"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <android.support.design.widget.FloatingActionButton
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".fragments.HomeFragment"
+                tools:listitem="@layout/patients_view" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ic_add"
-        app:backgroundTint="@color/ms_errorColor"
-        app:fabSize="mini"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="116dp"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/user_24"
+        app:backgroundTint="@color/fui_bgAnonymous"
+        app:fabSize="auto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/design_default_color_primary" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

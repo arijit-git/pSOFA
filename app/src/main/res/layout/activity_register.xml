@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/design_default_color_secondary"
     tools:context=".activities.RegisterActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -85,13 +85,13 @@
         <Button
             android:id="@+id/appCompatButtonRegister"
             style="@android:style/Widget.Material.Button"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="63dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/fui_bgPhone"
+            android:backgroundTint="@color/design_default_color_primary"
             android:fontFamily="sans-serif"
             android:text="@string/text_register"
             android:textAllCaps="false"
@@ -100,7 +100,7 @@
             android:typeface="sans"
             app:layout_constraintBottom_toTopOf="@+id/appCompatTextViewLoginLink"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputEditTextConfirmPassword" />
 
@@ -115,7 +115,7 @@
             android:fontFamily="sans-serif"
             android:text="@string/text_already_member"
             android:textAllCaps="false"
-            android:textColor="@color/fui_bgAnonymous"
+            android:textColor="@color/design_default_color_primary_variant"
             android:textSize="14sp"
             android:typeface="sans"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -126,16 +126,21 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="123dp"
+            android:layout_width="138dp"
+            android:layout_height="120dp"
             android:layout_marginStart="105dp"
             android:layout_marginTop="34dp"
             android:layout_marginEnd="105dp"
             android:layout_marginBottom="28dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/doctor"
+            android:backgroundTintMode="multiply"
+            android:cropToPadding="false"
+            android:fadingEdge="horizontal|vertical"
+            android:scaleType="center"
             app:layout_constraintBottom_toTopOf="@+id/textInputEditTextName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/doctor" />
-    </android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

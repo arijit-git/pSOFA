@@ -3,20 +3,8 @@ package com.ray.apps.psofa.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,13 +18,14 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
 import com.ray.apps.psofa.R;
-import com.ray.apps.psofa.fragments.DashboardFragment;
 import com.ray.apps.psofa.fragments.HomeFragment;
 import com.ray.apps.psofa.fragments.PatientsViewFragment;
+import com.ray.apps.psofa.fragments.RatingFragment;
 import com.ray.apps.psofa.fragments.SettingsFragment;
 import com.ray.apps.psofa.other.SharedPrefs;
 import com.squareup.picasso.Picasso;
@@ -47,6 +36,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 
 public class NavActivity extends BaseActivity
@@ -63,8 +61,7 @@ public class NavActivity extends BaseActivity
     private final Context mContext = this;
     private ImageView mProfileImageView;
     private TextView btnEdit;
-
-    FloatingActionButton fab;
+    NavigationView navigationView;
 
 
     @Override
@@ -81,7 +78,7 @@ public class NavActivity extends BaseActivity
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // finally change the color
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.ms_black));
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.design_default_color_secondary));
 
         setTitle("Home");
 
@@ -91,7 +88,7 @@ public class NavActivity extends BaseActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         View header = navigationView.getHeaderView(0);
@@ -132,7 +129,6 @@ public class NavActivity extends BaseActivity
         navigationView.setCheckedItem(R.id.nav_home);
         Fragment fragment = new HomeFragment();
         displaySelectedFragment(fragment);
-
 
     }
 
@@ -208,13 +204,14 @@ public class NavActivity extends BaseActivity
                 break;
             case R.id.nav_patient:
                 // patient ui
-                //setTitle("Registered Patients");
+                navigationView.setCheckedItem(R.id.nav_patient);
                 newFragment = new PatientsViewFragment();
                // hideProgressDialog();
                 displaySelectedFragment(newFragment);
                 //updateUI(currentUser);
                 break;
             case R.id.nav_settings:
+                navigationView.setCheckedItem(R.id.nav_settings);
                 newFragment = new SettingsFragment();
                 displaySelectedFragment(newFragment);
                 break;
@@ -224,11 +221,9 @@ public class NavActivity extends BaseActivity
                 break;*/
 
             case R.id.nav_help:
-                //fragment = new Menu3();
-                //hideProgressDialog();
-                //Log.d(TAG, "Delete Account");
-                //deleteUserAccount();
-                //deleteUserAccount();
+                navigationView.setCheckedItem(R.id.nav_help);
+                newFragment = new RatingFragment();
+                displaySelectedFragment(newFragment);
                 break;
             /*case R.id.nav_dash:
                 newFragment = new DashboardFragment();
@@ -262,7 +257,7 @@ public class NavActivity extends BaseActivity
      */
     private void displaySelectedFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.flContent, fragment);
+        fragmentTransaction.replace(R.id.flContent, fragment).addToBackStack("new_fragment");
         fragmentTransaction.commit();
     }
 
@@ -298,9 +293,6 @@ public class NavActivity extends BaseActivity
         //checkConnection();
     }
     public void updateUI(FirebaseUser user){
-        //userName = findViewById(R.id.);
-
-
         if (user != null) {
             // Name, email address, and profile photo Url
             String name = user.getDisplayName();
@@ -320,8 +312,6 @@ public class NavActivity extends BaseActivity
                 photoUrl = profile.getPhotoUrl();
                 phone = profile.getPhoneNumber();
             }
-
-
 
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();

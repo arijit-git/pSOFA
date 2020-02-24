@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.SettingsFragment">
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/material_green_500"
+        android:backgroundTint="@color/fui_bgAnonymous"
         android:fontFamily="sans-serif"
         android:text="Reset Password"
         android:textAllCaps="false"
@@ -80,5 +80,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnResetPswd" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

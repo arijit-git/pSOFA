@@ -46,7 +46,7 @@
             android:layout_height="@dimen/thumbnail"
             android:layout_marginRight="16dp"
             android:background="@drawable/baby"
-            android:backgroundTint="@color/colorPrimary"
+            android:backgroundTint="@color/fui_bgAnonymous"
             android:clickable="true"
             app:tintMode="src_in" />
 
@@ -59,7 +59,7 @@
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
             android:text="Test"
-            android:textColor="@color/item_name"
+            android:textColor="@color/fui_bgAnonymous"
             android:textSize="17sp" />
 
         <TextView
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/name"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="70dp"
             android:layout_toRightOf="@+id/life_res"
             android:text="N/A"
             android:textColor="@color/material_green_700"
@@ -97,8 +97,8 @@
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-24dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="-100dp"
+            android:layout_marginTop="70dp"
             android:layout_toEndOf="@+id/gender"
             android:text="12"
             android:textStyle="bold" />
@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:layout_toEndOf="@+id/age"
             android:text="months"
             android:textStyle="bold" />
@@ -119,11 +119,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/thumbnail"
             android:layout_alignParentBottom="false"
-            android:layout_marginLeft="-25dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginLeft="-100dp"
+            android:layout_marginTop="32dp"
             android:layout_toRightOf="@+id/gender"
             android:text="Final Outcome :"
-            android:textColor="@color/item_name"
+            android:textColor="@color/fui_bgAnonymous"
             android:textStyle="bold" />
 
         <TextView
@@ -134,7 +134,7 @@
             android:layout_marginRight="20dp"
             android:fontFamily="sans-serif-medium"
             android:text="pSOFA Score"
-            android:textColor="@color/item_name"
+            android:textColor="@color/fui_bgAnonymous"
             android:textSize="17sp" />
 
         <TextView
@@ -157,7 +157,7 @@
             android:layout_marginTop="50dp"
             android:layout_toRightOf="@id/scoreTextMax"
             android:text="0.0"
-            android:textColor="@color/fui_bgEmail"
+            android:textColor="@color/ms_black"
             android:textSize="14sp" />
 
         <TextView
@@ -180,7 +180,7 @@
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@id/scoreTextMax"
             android:text="0.0"
-            android:textColor="@color/fui_bgEmail"
+            android:textColor="@color/ms_black"
             android:textSize="14sp" />
 
     </RelativeLayout>

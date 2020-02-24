@@ -2,9 +2,6 @@ package com.ray.apps.psofa.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +16,10 @@ import com.ray.apps.psofa.R;
 import com.ray.apps.psofa.other.SharedPrefs;
 import com.ray.apps.psofa.other.Utils;
 
-import javax.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
 
 public class DiagnosisStepFourFragment extends Fragment implements View.OnClickListener {
 

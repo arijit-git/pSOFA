@@ -3,10 +3,10 @@ package com.ray.apps.psofa.activities;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
 import com.ray.apps.psofa.R;
 import com.squareup.picasso.Picasso;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 public class ProfileActivity extends BaseActivity {
 
@@ -41,7 +45,13 @@ public class ProfileActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         setTitle("My Profile");
-
+        Window window = this.getWindow();
+        // clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        // finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.design_default_color_secondary));
 
         FBUserId = findViewById(R.id.tv_user_id_val);
         textName = findViewById(R.id.textpNameVal);

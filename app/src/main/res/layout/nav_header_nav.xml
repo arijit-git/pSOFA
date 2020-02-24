@@ -14,7 +14,7 @@
     tools:context=".activities.NavActivity"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -90,18 +90,17 @@
             android:layout_height="wrap_content"
 
             android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
             android:layout_marginTop="2dp"
             android:autoLink="all"
             android:clickable="true"
             android:text="Edit Profile"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-            android:textColor="@color/stpi_default_primary_color"
+            android:textColor="@color/design_default_color_primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_phone_number" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

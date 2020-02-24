@@ -6,32 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".activities.RegisterPatientActivity">
 
-    <include layout="@layout/app_bar_nav" />
+    <include
+        layout="@layout/app_bar_nav"
+        android:background="@color/design_default_color_secondary" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/patient_scroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/patient_constraint"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:adjustViewBounds="false"
+                android:background="@drawable/baby"
+                android:backgroundTint="@color/colorOrange"
                 android:contentDescription="Patient"
-                android:src="@drawable/patient_1"
                 app:layout_constraintBottom_toTopOf="@+id/patient_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -155,13 +156,11 @@
 
             <Button
                 android:id="@+id/patient_register_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/patient_register_button_text"
@@ -169,15 +168,14 @@
                 android:textSize="14sp"
                 android:tooltipText="Register Patient's details"
                 android:typeface="sans"
-                app:backgroundTint="@color/stpi_default_primary_color"
+                app:backgroundTint="@color/design_default_color_primary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/days_spinner"
                 app:layout_constraintVertical_bias="1.0" />
 
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v4.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

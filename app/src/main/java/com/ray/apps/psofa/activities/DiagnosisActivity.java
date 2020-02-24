@@ -3,13 +3,6 @@ package com.ray.apps.psofa.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -36,6 +29,14 @@ import com.ray.apps.psofa.fragments.DiagnosisStepTwoFragment;
 import com.ray.apps.psofa.model.Patient;
 import com.ray.apps.psofa.other.SharedPrefs;
 import com.ray.apps.psofa.other.pSOFACalculator;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 public class DiagnosisActivity extends BaseActivity
         implements
@@ -74,7 +75,7 @@ public class DiagnosisActivity extends BaseActivity
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // finally change the color
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimary));
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.design_default_color_secondary));
 
         setTitle("SOFA Diagnosis");
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ms_white"
+    android:background="@color/design_default_color_secondary"
     tools:context=".activities.PatientActivity">
 
     <include
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include2">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -108,9 +108,9 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/material_green_50"
+                android:background="@color/ms_white"
                 android:minWidth="@dimen/activity_vertical_margin"
-                android:popupBackground="@color/ColorBackgroundWhite"
+                android:popupBackground="@color/ms_white"
                 android:spinnerMode="dropdown"
                 app:layout_constraintBottom_toTopOf="@+id/textView9"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -144,7 +144,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/stpi_default_primary_color"
+                android:backgroundTint="@color/design_default_color_primary"
                 android:fontFamily="sans-serif"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="@string/diag_start_btn_text"
@@ -454,7 +454,23 @@
                 app:layout_constraintStart_toEndOf="@+id/textViewFinalOutcome"
                 app:layout_constraintTop_toBottomOf="@+id/score_val_day7" />
 
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v4.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.constraint.ConstraintLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
+        app:adSize="BANNER"
+        app:adUnitId="@string/testAdUnitId"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"></com.google.android.gms.ads.AdView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

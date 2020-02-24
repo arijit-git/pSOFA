@@ -2,11 +2,10 @@ package com.ray.apps.psofa.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.NestedScrollView;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +19,11 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.ray.apps.psofa.R;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 
 
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {
@@ -42,6 +46,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         setContentView(R.layout.activity_register);
        // getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
+        Window window = this.getWindow();
+        // clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        // finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.design_default_color_secondary));
 
         initViews();
         initListeners();

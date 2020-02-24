@@ -7,7 +7,7 @@
     <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
     <string name="facebook_application_id" translatable="false">513502495841395</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb513502495841395</string>
-    <string name="google_client_id">595691179883-5radc1ciaeajl6aq4cc819tllhi5ptt0.apps.googleusercontent.com</string>
+    <string name="google_client_id">595691179883-kgjgumclhvbkc6mnhbk5q15pqt7amelh.apps.googleusercontent.com</string>
 
     <!-- Diagnosis Result-->
     <string name="sofa_score_result_text">pSOFA Result</string>
@@ -21,7 +21,7 @@
     <string name="error_message_age">Enter Age</string>
     <string name="error_message_password">Enter Password</string>
     <string name="success_message">Registration Successful</string>
-    <string name="text_not_member">Don\u0027t have an account? <b>Sign Up</b></string>
+    <string name="text_not_member">Don\u0027t have an account? <b>Sign Up Now</b></string>
     <string name="text_already_member">Already have an account? <b>Login Now</b></string>
     <string name="text_verify_email">Your email is not verified.\nPlease verify your email id here.</string>
     <string name="verify_email_text">Verify Email</string>
@@ -49,8 +49,8 @@
     <string name="patient_register_button_text">Add Basic Details</string>
     <string name="patient_register_more_button_text">Add Clinical Details</string>
     <string name="final_result_button_text">Mark Final Outcome</string>
-    <string name="prompt_name">Patient\'s Name</string>
-    <string name="prompt_age">Patient\'s Age</string>
+    <string name="prompt_name">Baby\'s Name</string>
+    <string name="prompt_age">Baby\'s Age in months</string>
     <string name="male_radio">Male</string>
     <string name="female_radio">Female</string>
 
@@ -74,8 +74,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Welcome to pSOFA Diagnosis</string>
     <string name="diag_step_one_title">Record Respiratory Diagnosis</string>
-    <string name="patient_floating_button_text">Click on the plus sign to add more patients.\n\n*Pull down to refresh*</string>
+    <string name="patient_floating_button_text">Use the floating button to add more patients.\n\n*Pull down to refresh*</string>
     <string name="delete">DELETE</string>
+    <string name="docMsg">You\'\re in right place Doctor !
+        \n\npSOFA application provides you the capability to calculate pediatic SOFA score with ease.
+        \n\n Let\'\s explore !
+    </string>
     <string name="refresh_text">Pull down to refresh</string>
     <string name="title_activity_settings">Settings</string>
 
@@ -156,5 +160,10 @@
     <string name="diag_start_btn_text">Start Diagnosis</string>
     <string name="app_version">v1.0</string>
     <string name="heellll">test</string>
+
+    <!-- google ads -->
+    <string name="testAdUnitId">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="adUnitId">ca-app-pub-4643711098711048/3287820117</string>
+
 
 </resources>

@@ -1,13 +1,13 @@
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/psofa_body"
+    android:background="@color/design_default_color_secondary"
     android:scrollbars="vertical"
     tools:context=".fragments.DiagnosisStepSixFragment">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -32,13 +32,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:gravity="center_horizontal"
             android:text="Record Renal"
-            android:textColor="@color/bg_row_background"
+            android:textColor="@color/ms_black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +57,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
             android:text="Age in months :"
+            android:textColor="@color/ms_white"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
@@ -71,10 +69,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:text="0"
-            android:textColor="@color/fui_bgEmail"
+            android:textColor="@color/ms_black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/text_step6"
@@ -85,14 +82,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
             android:text="Creatinine, mg/dL"
+            android:textColor="@color/ms_white"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_step6" />
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/step61CardView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -118,6 +115,6 @@
                 android:hint="Enter value here"
                 android:inputType="numberDecimal"
                 android:paddingLeft="10dp" />
-        </android.support.v7.widget.CardView>
-    </android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

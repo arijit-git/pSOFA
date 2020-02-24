@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ray.apps.psofa">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +13,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+        android:theme="@style/FullscreenTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4643711098711048~7855612909" />
 
         <activity android:name=".activities.SplashScreenActivity">
             <intent-filter>
@@ -23,8 +29,7 @@
         <activity
             android:name=".activities.PatientActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_patient"
-            android:theme="@style/FullscreenTheme" />
+            android:label="@string/title_activity_patient" />
         <activity
             android:name=".activities.SettingsActivity"
             android:configChanges="orientation|screenSize"
@@ -48,29 +53,30 @@
             android:configChanges="orientation|screenSize">
             <intent-filter android:label="@string/sign_in">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
-                <data android:scheme="http"
+                <data
                     android:host="http://www.codebaseneo.com/"
-                    android:pathPrefix="/@string/sign_in" />
-                <!-- note that the leading "/" is required for pathPrefix-->
+                    android:pathPrefix="/@string/sign_in"
+                    android:scheme="http" />
+                <!-- note that the leading "/" is required for pathPrefix -->
                 <!-- Accepts URIs that begin with "example://gizmos” -->
-                <data android:scheme="psofa"
-                    android:host="psofa" />
-
+                <data
+                    android:host="psofa"
+                    android:scheme="psofa" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.RegisterActivity" />
         <activity
             android:name=".activities.NavActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName=".activities.SignInActivity"/>
-
-        <!-- The meta-data element is needed for versions lower than 4.1 -->
+            android:parentActivityName=".activities.NavActivity" /> <!-- The meta-data element is needed for versions lower than 4.1 -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".activities.NavActivity" />
+
         <activity
             android:name=".activities.DiagnosisActivity"
             android:configChanges="orientation|screenSize"
@@ -92,6 +98,5 @@
                 android:value=".activities.NavActivity" />
         </activity>
     </application>
-
 
 </manifest>

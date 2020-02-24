@@ -4,10 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +28,11 @@ import com.ray.apps.psofa.R;
 import com.ray.apps.psofa.model.Patient;
 import com.ray.apps.psofa.other.SharedPrefs;
 import com.ray.apps.psofa.other.Utils;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 public class RegisterPatientActivity extends AppCompatActivity {
 
@@ -62,7 +63,7 @@ public class RegisterPatientActivity extends AppCompatActivity {
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // finally change the color
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.ms_black));
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.design_default_color_secondary));
 
         setTitle("Add Patient");
 

@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -22,6 +20,11 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -50,6 +53,7 @@ public class PatientActivity extends BaseActivity {
     private Switch p_switch;
     FirebaseAuth mAuth ;
     FirebaseUser current_user;
+    private AdView mAdView;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference usersRef = database.getReference("users");
 
@@ -64,6 +68,15 @@ public class PatientActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         setTitle("Modify Patient");
 
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         mAuth = FirebaseAuth.getInstance();
         current_user = mAuth.getCurrentUser();
@@ -103,7 +116,7 @@ public class PatientActivity extends BaseActivity {
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // finally change the color
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimary));
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.design_default_color_secondary));
         sharedPrefs = new SharedPrefs(this);
 
         //textViewPatientIdVal.setText(sharedPrefs.getPatientId());
